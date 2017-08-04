@@ -40,4 +40,7 @@ dependencies {
     //放大缩小插件
     compile 'com.ycjiang:imgepreviewlibrary:1.0.1'
     compile 'com.android.support:recyclerview-v7:25.+'
+
+    //粉碎效果
+    compile 'tyrantgit:explosionfield:1.0.1'
 }

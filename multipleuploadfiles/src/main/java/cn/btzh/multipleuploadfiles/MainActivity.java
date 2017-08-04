@@ -45,6 +45,7 @@ import cn.btzh.multipleuploadfiles.view.recyler.base.CommonBaseAdapter;
 import cn.btzh.multipleuploadfiles.view.recyler.interfaces.OnItemChildClickListener;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
+import tyrantgit.explosionfield.ExplosionField;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -85,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     long startTime;
     long endTime;
 
+    ExplosionField mExplosionField;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,10 +95,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         mContext = this;
         CheckPermession.verifyCameraPermissions(this);
+
         initView();
     }
 
     private void initView(){
+        mExplosionField = ExplosionField.attach2Window(this);
         strImgPath = CreateLocalFilePath.createMkdir(mContext,"photo");
 
         pickerAdapter = new CommonBaseAdapter<Attachment>(mContext,attachments,
@@ -142,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         pickerAdapter.setOnItemChildClickListener(R.id.pic_delete, new OnItemChildClickListener<Attachment>() {
             @Override
             public void onItemChildClick(ViewHolder viewHolder, Attachment data, int position) {
+                mExplosionField.explode(viewHolder.getConvertView());
                 attachments.remove(position);
                 thumbViewInfos.remove(position);
                 pickerAdapter.notifyDataSetChanged();
