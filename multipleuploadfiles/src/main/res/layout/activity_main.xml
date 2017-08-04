@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_pz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拍照"/>
+
+
+    <ProgressBar
+        android:id="@+id/myprogressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+    <!--<HorizontalScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="120dp"-->
+        <!--android:background="@drawable/bg_textview"-->
+        <!--android:layout_margin="5dp" >-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/sb_attachment_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal" >-->
+
+        <!--</LinearLayout>-->
+    <!--</HorizontalScrollView>-->
+
+
+    <!--<cn.btzh.multipleuploadfiles.util.HorizontalListView-->
+        <!--android:id="@+id/myHorizontalListView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dip"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:background="@drawable/bg_textview"-->
+        <!--/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/imageRecyclerView"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_textview"
+        android:layout_margin="5dp"
+        android:layout_height="160dp" />
+
+
+    <Button
+        android:id="@+id/button_sc_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="循环一张张上传"/>
+
+    <Button
+        android:id="@+id/button_sc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上传多张原图"/>
+
+    <Button
+        android:id="@+id/button_sc_yasuo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上传多张压缩图片"/>
+
+
+    <TextView
+        android:id="@+id/textview_xh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="循环上传耗时："/>
+
+    <TextView
+        android:id="@+id/textview_multiple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多张上传耗时："/>
+
+
+</LinearLayout>

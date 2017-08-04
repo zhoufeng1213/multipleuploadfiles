@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.btzh.multipleuploadfiles">
+
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".global.GlobalApplication"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ImagePhotoActivity"
+            android:theme="@style/ImageAppTheme"/>
+    </application>
+
+
+    <!-- 链接网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 安装程序的权限 -->
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 定位相关的权限 -->
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.LOCATION" />
+    <!-- 手机状态 -->
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 获取GSM等网络状态的控制权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDER" />
+    <!-- 获取WIFI无线上网的控制权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+
+    <!-- 百度定位需要的权限 -->
+    <!--     <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" > -->
+    <!--     </permission> -->
+
+    <!--     <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" > -->
+    <!--     </uses-permission> -->
+    <!--
+         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+		<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+		<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+		<uses-permission android:name="android.permission.INTERNET" /> <uses-permission
+		android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    -->
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+</manifest>

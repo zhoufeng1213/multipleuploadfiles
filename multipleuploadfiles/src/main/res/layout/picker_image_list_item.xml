@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:background="@color/cg_grey_light"
+             android:layout_gravity="center_vertical"
+             android:layout_margin="10dp"
+             >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/pic_pre_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription=""
+            android:scaleType="fitXY"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/pic_upload_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:contentDescription=""
+        android:src="@drawable/cg_report_image_success"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/pic_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:contentDescription=""
+        android:src="@drawable/cg_report_image_delete" />
+
+</FrameLayout>
